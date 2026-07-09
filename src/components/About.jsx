@@ -55,7 +55,7 @@ export default function About() {
 
           <div className="flex flex-wrap gap-3 pt-3">
             <a
-              href="https://www.linkedin.com/in/hadley-chery/?skipRedirect=true"
+              href="https://www.linkedin.com/in/hadley-chery/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm border border-divider text-zinc-400 px-4 py-2

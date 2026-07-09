@@ -8,7 +8,7 @@ const LINKS = [
   { label: 'CV', value: 'Voir en ligne', href: '/CV-CHERY-Jean-Hadley-SOC-Analyst.pdf', external: true },
   { label: 'CV', value: 'Télécharger le PDF', href: '/CV-CHERY-Jean-Hadley-SOC-Analyst.pdf', download: true },
   { label: 'Email', value: 'jhadleyc@mail.com', href: 'mailto:jhadleyc@mail.com' },
-  { label: 'LinkedIn', value: 'linkedin.com/in/hadley-chery', href: 'https://www.linkedin.com/in/hadley-chery/?skipRedirect=true', external: true },
+  { label: 'LinkedIn', value: 'linkedin.com/in/hadley-chery', href: 'https://www.linkedin.com/in/hadley-chery/', external: true },
   { label: 'GitHub', value: 'github.com/j-Hadley-C', href: 'https://github.com/j-Hadley-C', external: true },
 ]
 
