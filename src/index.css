@@ -13,7 +13,7 @@ html {
 body {
   background-color: #0a0a0f;
   color: #e2e8f0;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Poppins', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,13 +22,13 @@ body {
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #0d1117; }
 ::-webkit-scrollbar-thumb { background: #21262d; border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: #00ff41; }
+::-webkit-scrollbar-thumb:hover { background: #00e5ff; }
 
 /* Subtle hero grid — technical feel without "hacker movie" */
 .hero-grid {
   background-image:
-    linear-gradient(rgba(0,255,65,0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,255,65,0.02) 1px, transparent 1px);
+    linear-gradient(rgba(0,229,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,229,255,0.02) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -40,7 +40,7 @@ body {
 
 /* Accent glow — used sparingly, only on the name */
 .name-glow {
-  text-shadow: 0 0 40px rgba(0, 255, 65, 0.35);
+  text-shadow: 0 0 40px rgba(0, 229, 255, 0.35);
 }
 
 @media (prefers-reduced-motion: reduce) {

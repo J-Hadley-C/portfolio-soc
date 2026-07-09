@@ -12,9 +12,14 @@ export default {
         elevated: '#161b22',
         divider: '#21262d',
         accent: {
-          DEFAULT: '#00ff41',
-          dim: '#0d3a1a',
-          muted: '#1a7f37',
+          DEFAULT: '#00e5ff',
+          dim: '#062a30',
+          muted: '#0e7490',
+        },
+        'accent-violet': {
+          DEFAULT: '#8b5cf6',
+          dim: '#1e1b3a',
+          muted: '#6d28d9',
         },
         critical: '#f85149',
         high: '#e3b341',
@@ -22,8 +27,8 @@ export default {
         info: '#58a6ff',
       },
       fontFamily: {
-        display: ['Barlow Condensed', 'Impact', 'sans-serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Poppins', 'sans-serif'],
+        sans: ['Poppins', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'Consolas', 'monospace'],
       },
       fontSize: {
