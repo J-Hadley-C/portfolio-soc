@@ -59,8 +59,13 @@ export default function Hero() {
     <section id="home" className="relative min-h-screen flex flex-col justify-center overflow-hidden hero-grid">
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse 70% 55% at 50% 45%, rgba(0,255,65,0.04) 0%, transparent 65%)' }}
+        style={{ background: 'linear-gradient(135deg, #0a0a0f 0%, #0a2a33 55%, #0a0a0f 100%)' }}
       />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse 70% 55% at 50% 45%, rgba(0,229,255,0.06) 0%, transparent 65%)' }}
+      />
+      <div className="absolute inset-0 bg-black/60 pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 pt-20 pb-16 w-full">
         <motion.div
@@ -73,7 +78,7 @@ export default function Hero() {
             Portfolio — Cybersécurité SOC
           </p>
 
-          {/* Name — Barlow Condensed ExtraBold, the only place we spend our boldness */}
+          {/* Name — Poppins ExtraBold, the only place we spend our boldness */}
           <h1
             className="font-display font-extrabold uppercase text-hero leading-none mb-4"
             style={{ letterSpacing: '-0.01em' }}
