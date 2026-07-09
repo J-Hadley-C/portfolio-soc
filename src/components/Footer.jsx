@@ -1,7 +1,15 @@
+import { motion } from 'framer-motion'
+
 export default function Footer() {
   return (
     <footer className="border-t border-divider bg-surface">
-      <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+      >
         <p className="text-xs text-zinc-600">
           CHERY Jean-Hadley — SOC Analyst Junior — 2026
         </p>
@@ -29,7 +37,7 @@ export default function Footer() {
             Email
           </a>
         </div>
-      </div>
+      </motion.div>
     </footer>
   )
 }
