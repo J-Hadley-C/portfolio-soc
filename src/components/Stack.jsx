@@ -57,15 +57,15 @@ export default function Stack() {
           <motion.div
             key={t.name}
             variants={item}
-            className="w-[220px] h-[220px] rounded-full border-[3px] border-accent bg-surface
-              flex flex-col items-center justify-center text-center p-5
-              transition-transform duration-300 hover:scale-[1.08] hover:-rotate-2
+            className="relative w-[220px] h-[220px] rounded-full border-[3px] border-accent bg-surface
+              flex flex-col items-center justify-center text-center p-5 cursor-default
+              transition-transform duration-300 hover:z-10 hover:scale-[1.08] hover:-rotate-2
               hover:shadow-[0_0_25px_rgba(0,229,255,0.5)]"
           >
-            <span className="font-display font-bold text-sm leading-tight text-zinc-100 mb-1">
+            <span className="font-display font-bold text-sm leading-tight text-zinc-100 mb-1 select-none">
               {t.name}
             </span>
-            <span className="text-xs text-zinc-500 uppercase tracking-wide">{t.cat}</span>
+            <span className="text-xs text-zinc-500 uppercase tracking-wide select-none">{t.cat}</span>
           </motion.div>
         ))}
       </motion.div>
