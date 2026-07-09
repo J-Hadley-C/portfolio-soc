@@ -1,28 +1,19 @@
 import { motion } from 'framer-motion'
 
 const TOOLS = [
-  { name: 'Wazuh SIEM 4.12.0', cat: 'SIEM', accent: 'accent' },
-  { name: 'Windows Server 2022', cat: 'OS / Active Directory', accent: 'info' },
-  { name: 'Kali Linux', cat: 'OS Attaquant', accent: 'critical' },
-  { name: 'Metasploit / msfvenom', cat: 'Exploitation', accent: 'critical' },
-  { name: 'Nmap', cat: 'Reconnaissance', accent: 'high' },
-  { name: 'Wireshark / tshark', cat: 'Analyse réseau', accent: 'high' },
-  { name: 'Impacket', cat: 'Post-Exploitation', accent: 'medium' },
-  { name: 'Docker / WSL2', cat: 'Infrastructure', accent: 'info' },
-  { name: 'VirtualBox', cat: 'Virtualisation', accent: 'info' },
-  { name: 'MITRE ATT&CK', cat: 'Framework', accent: 'none' },
-  { name: 'PowerShell', cat: 'Scripting Windows', accent: 'info' },
-  { name: 'Bash', cat: 'Scripting Linux', accent: 'accent' },
+  { name: 'Wazuh SIEM 4.12.0', cat: 'SIEM' },
+  { name: 'Windows Server 2022', cat: 'OS / Active Directory' },
+  { name: 'Kali Linux', cat: 'OS Attaquant' },
+  { name: 'Metasploit / msfvenom', cat: 'Exploitation' },
+  { name: 'Nmap', cat: 'Reconnaissance' },
+  { name: 'Wireshark / tshark', cat: 'Analyse réseau' },
+  { name: 'Impacket', cat: 'Post-Exploitation' },
+  { name: 'Docker / WSL2', cat: 'Infrastructure' },
+  { name: 'VirtualBox', cat: 'Virtualisation' },
+  { name: 'MITRE ATT&CK', cat: 'Framework' },
+  { name: 'PowerShell', cat: 'Scripting Windows' },
+  { name: 'Bash', cat: 'Scripting Linux' },
 ]
-
-const COLOR = {
-  accent: { border: 'border-accent/20', dot: 'bg-accent', name: 'text-accent' },
-  info: { border: 'border-info/20', dot: 'bg-info', name: 'text-info' },
-  critical: { border: 'border-critical/20', dot: 'bg-critical', name: 'text-critical' },
-  high: { border: 'border-high/20', dot: 'bg-high', name: 'text-high' },
-  medium: { border: 'border-medium/20', dot: 'bg-medium', name: 'text-medium' },
-  none: { border: 'border-divider', dot: 'bg-zinc-600', name: 'text-zinc-300' },
-}
 
 const container = {
   whileInView: { transition: { staggerChildren: 0.05 } },
@@ -60,27 +51,23 @@ export default function Stack() {
         initial="initial"
         whileInView="whileInView"
         viewport={{ once: true }}
-        className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3"
+        className="flex flex-wrap justify-center gap-6"
       >
-        {TOOLS.map(t => {
-          const c = COLOR[t.accent]
-          return (
-            <motion.div
-              key={t.name}
-              variants={item}
-              className={`bg-surface border ${c.border} p-4
-                hover:-translate-y-0.5 transition-transform duration-200 cursor-default`}
-            >
-              <div className="flex items-center gap-2 mb-2">
-                <span className={`w-2 h-2 rounded-full flex-shrink-0 ${c.dot}`} />
-                <span className={`font-display font-semibold text-base leading-tight ${c.name}`}>
-                  {t.name}
-                </span>
-              </div>
-              <p className="text-xs text-zinc-600 uppercase tracking-wide pl-4">{t.cat}</p>
-            </motion.div>
-          )
-        })}
+        {TOOLS.map(t => (
+          <motion.div
+            key={t.name}
+            variants={item}
+            className="w-[220px] h-[220px] rounded-full border-[3px] border-accent bg-surface
+              flex flex-col items-center justify-center text-center p-5
+              transition-transform duration-300 hover:scale-[1.08] hover:-rotate-2
+              hover:shadow-[0_0_25px_rgba(0,229,255,0.5)]"
+          >
+            <span className="font-display font-bold text-sm leading-tight text-zinc-100 mb-1">
+              {t.name}
+            </span>
+            <span className="text-xs text-zinc-500 uppercase tracking-wide">{t.cat}</span>
+          </motion.div>
+        ))}
       </motion.div>
     </section>
   )
