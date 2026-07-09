@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 const FORMSPREE = 'https://formspree.io/f/YOUR_FORM_ID'
 
 const LINKS = [
+  { label: 'CV', value: 'Voir en ligne', href: '/CV-CHERY-Jean-Hadley-SOC-Analyst.pdf', external: true },
+  { label: 'CV', value: 'Télécharger le PDF', href: '/CV-CHERY-Jean-Hadley-SOC-Analyst.pdf', download: true },
   { label: 'Email', value: 'jhadleyc@mail.com', href: 'mailto:jhadleyc@mail.com' },
   { label: 'LinkedIn', value: 'linkedin.com/in/hadley-chery', href: 'https://www.linkedin.com/in/hadley-chery/?skipRedirect=true', external: true },
   { label: 'GitHub', value: 'github.com/j-Hadley-C', href: 'https://github.com/j-Hadley-C', external: true },
@@ -64,8 +66,9 @@ export default function Contact() {
         >
           {LINKS.map(l => (
             <a
-              key={l.label}
+              key={`${l.label}-${l.value}`}
               href={l.href}
+              download={l.download || undefined}
               target={l.external ? '_blank' : undefined}
               rel={l.external ? 'noopener noreferrer' : undefined}
               className="flex items-center gap-5 p-5 bg-surface border border-divider

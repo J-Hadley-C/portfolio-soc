@@ -115,6 +115,15 @@ export default function Hero() {
             >
               Me contacter
             </a>
+            <a
+              href="/CV-CHERY-Jean-Hadley-SOC-Analyst.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-divider text-zinc-300 text-sm font-semibold px-7 py-3
+                hover:border-accent hover:text-accent active:scale-95 transition-all duration-150"
+            >
+              Voir mon CV
+            </a>
           </div>
         </motion.div>
 
