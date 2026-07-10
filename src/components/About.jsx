@@ -12,7 +12,7 @@ const KEY_POINTS = [
   { label: 'Reconversion', value: 'Cybersécurité SOC' },
   { label: 'Lab monté', value: 'VirtualBox + Wazuh + AD + Kali' },
   { label: 'Statut', value: 'Disponible — 1er poste SOC Junior' },
-  { label: 'Email', value: 'jhadleyc@mail.com' },
+  { label: 'Email', value: 'jhadleyc@gmail.com' },
   { label: 'LinkedIn', value: 'linkedin.com/in/hadley-chery' },
 ]
 
@@ -64,11 +64,11 @@ export default function About() {
               LinkedIn →
             </a>
             <a
-              href="mailto:jhadleyc@mail.com"
+              href="mailto:jhadleyc@gmail.com"
               className="text-sm border border-divider text-zinc-400 px-4 py-2
                 hover:border-accent hover:text-accent transition-colors duration-200"
             >
-              jhadleyc@mail.com →
+              jhadleyc@gmail.com →
             </a>
           </div>
         </motion.div>
