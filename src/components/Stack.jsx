@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
 
 const TOOLS = [
+  { name: 'n8n', cat: 'Automatisation SOAR' },
+  { name: 'VirusTotal / MISP / AbuseIPDB', cat: 'Threat Intelligence' },
+  { name: 'Claude API (Anthropic)', cat: 'Analyse IA' },
   { name: 'Wazuh SIEM 4.12.0', cat: 'SIEM' },
   { name: 'Windows Server 2022', cat: 'OS / Active Directory' },
   { name: 'Kali Linux', cat: 'OS Attaquant' },
@@ -13,9 +16,6 @@ const TOOLS = [
   { name: 'MITRE ATT&CK', cat: 'Framework' },
   { name: 'PowerShell', cat: 'Scripting Windows' },
   { name: 'Bash', cat: 'Scripting Linux' },
-  { name: 'n8n', cat: 'Automatisation SOAR' },
-  { name: 'VirusTotal / MISP / AbuseIPDB', cat: 'Threat Intelligence' },
-  { name: 'Claude API (Anthropic)', cat: 'Analyse IA' },
 ]
 
 const container = {
