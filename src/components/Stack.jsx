@@ -13,6 +13,9 @@ const TOOLS = [
   { name: 'MITRE ATT&CK', cat: 'Framework' },
   { name: 'PowerShell', cat: 'Scripting Windows' },
   { name: 'Bash', cat: 'Scripting Linux' },
+  { name: 'n8n', cat: 'Automatisation SOAR' },
+  { name: 'VirusTotal / MISP / AbuseIPDB', cat: 'Threat Intelligence' },
+  { name: 'Claude API (Anthropic)', cat: 'Analyse IA' },
 ]
 
 const container = {
