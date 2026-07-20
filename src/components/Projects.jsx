@@ -107,6 +107,29 @@ const PROJECTS = [
     ],
     lesson: "Reconnaître un scan Nmap dans une capture réseau (SYN sans SYN-ACK, masse de ports, courte durée) est une compétence fondamentale SOC.",
   },
+  {
+    id: 6,
+    title: 'Audit de sécurité web — OWASP ZAP',
+    sev: 'medium',
+    rules: [],
+    badge: 'Correctifs déployés ✓',
+    mitre: 'OWASP — Secure Headers',
+    technique: 'Scan passif ZAP + correctifs vercel.json',
+    date: '2026-07-20',
+    summary: "Audit passif de mon propre portfolio avec OWASP ZAP, mené de bout en bout : 16 faiblesses détectées (surtout des en-têtes de sécurité HTTP manquants), 6 en-têtes ajoutés via vercel.json et vérifiés sur le serveur, re-scan à 9 alertes dont 0 exploitable.",
+    steps: [
+      'sudo apt install -y zaproxy  (Kali)',
+      'ZAP Manual Explore → scan passif sur le périmètre défini',
+      'Édition vercel.json : CSP, HSTS, X-Frame-Options, nosniff, Referrer/Permissions-Policy',
+      'git push → redéploiement Vercel → re-scan de vérification',
+    ],
+    detection: [
+      'Scan initial : 16 alertes (0 grave) — en-têtes de sécurité manquants',
+      '6 en-têtes de sécurité déployés via vercel.json, vérifiés sur le serveur',
+      'Re-scan : 9 alertes, 0 exploitable — corrigé & vérifié',
+    ],
+    lesson: "Définir le périmètre AVANT de scanner, et savoir trier une vraie faille d'un bruit d'outil (compromis assumé, faux positif, ressource tierce). Le cycle détecter → corriger → re-tester est le cœur de la sécurisation.",
+  },
 ]
 
 function Card({ p, idx }) {
@@ -134,7 +157,7 @@ function Card({ p, idx }) {
                 {s.label}
               </span>
               <span className="text-zinc-700">·</span>
-              <span className="text-xs text-accent font-medium">Détection prouvée ✓</span>
+              <span className="text-xs text-accent font-medium">{p.badge || 'Détection prouvée ✓'}</span>
               {p.rules.map(r => (
                 <span key={r} className="text-xs text-zinc-600">
                   Rule {r}
@@ -242,8 +265,8 @@ export default function Projects() {
           Lab SOC en action
         </h2>
         <p className="text-zinc-500 mt-3 max-w-xl leading-relaxed">
-          Cinq attaques réelles reproduites dans le lab, avec la chaîne de détection Wazuh
-          prouvée bout en bout. Cliquer sur une carte pour les détails.
+          Six projets du lab : cinq attaques réelles détectées bout en bout par Wazuh,
+          et un audit de sécurité web (OWASP ZAP). Cliquer sur une carte pour les détails.
         </p>
       </motion.div>
 
