@@ -116,6 +116,7 @@ const PROJECTS = [
     mitre: 'OWASP — Secure Headers',
     technique: 'Scan passif ZAP + correctifs vercel.json',
     date: '2026-07-20',
+    report: '/Rapport-Audit-OWASP-ZAP.pdf',
     summary: "Audit passif de mon propre portfolio avec OWASP ZAP, mené de bout en bout : 16 faiblesses détectées (surtout des en-têtes de sécurité HTTP manquants), 6 en-têtes ajoutés via vercel.json et vérifiés sur le serveur, re-scan à 9 alertes dont 0 exploitable.",
     steps: [
       'sudo apt install -y zaproxy  (Kali)',
@@ -238,6 +239,20 @@ function Card({ p, idx }) {
                   {p.lesson}
                 </p>
               </div>
+
+              {/* Report PDF */}
+              {p.report && (
+                <div>
+                  <a
+                    href={p.report}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 border border-accent text-accent text-sm font-medium px-4 py-2 hover:bg-accent hover:text-bg transition-colors duration-150"
+                  >
+                    Voir le rapport PDF ↗
+                  </a>
+                </div>
+              )}
 
               <p className="text-xs text-zinc-700 text-right">{p.date}</p>
             </div>
