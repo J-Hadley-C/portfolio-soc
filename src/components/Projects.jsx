@@ -145,9 +145,17 @@ function Card({ p, idx }) {
       transition={{ duration: 0.45, delay: idx * 0.06 }}
       className={`bg-surface border border-divider border-l-4 ${s.border} overflow-hidden`}
     >
-      <button
+      <div
+        role="button"
+        tabIndex={0}
         onClick={() => setOpen(o => !o)}
-        className="w-full text-left px-6 py-5 hover:bg-elevated/30 transition-colors duration-150"
+        onKeyDown={e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            setOpen(o => !o)
+          }
+        }}
+        className="w-full text-left px-6 py-5 hover:bg-elevated/30 transition-colors duration-150 cursor-pointer"
         aria-expanded={open}
       >
         <div className="flex items-start gap-4 justify-between">
@@ -166,10 +174,23 @@ function Card({ p, idx }) {
               ))}
             </div>
 
-            {/* Title */}
-            <h3 className="font-display font-bold text-xl sm:text-2xl text-zinc-100 leading-tight mb-2">
-              {p.title}
-            </h3>
+            {/* Title + report link */}
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-2">
+              <h3 className="font-display font-bold text-xl sm:text-2xl text-zinc-100 leading-tight">
+                {p.title}
+              </h3>
+              {p.report && (
+                <a
+                  href={p.report}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={e => e.stopPropagation()}
+                  className="inline-flex items-center gap-1.5 border border-accent text-accent text-xs font-medium px-3 py-1.5 hover:bg-accent hover:text-bg transition-colors duration-150 flex-shrink-0"
+                >
+                  Rapport PDF ↗
+                </a>
+              )}
+            </div>
 
             {/* Meta */}
             <p className="text-xs text-zinc-500 uppercase tracking-wide">
@@ -187,7 +208,7 @@ function Card({ p, idx }) {
         </div>
 
         <p className="text-zinc-400 text-sm mt-3 leading-relaxed text-left">{p.summary}</p>
-      </button>
+      </div>
 
       <AnimatePresence initial={false}>
         {open && (
@@ -239,20 +260,6 @@ function Card({ p, idx }) {
                   {p.lesson}
                 </p>
               </div>
-
-              {/* Report PDF */}
-              {p.report && (
-                <div>
-                  <a
-                    href={p.report}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 border border-accent text-accent text-sm font-medium px-4 py-2 hover:bg-accent hover:text-bg transition-colors duration-150"
-                  >
-                    Voir le rapport PDF ↗
-                  </a>
-                </div>
-              )}
 
               <p className="text-xs text-zinc-700 text-right">{p.date}</p>
             </div>
