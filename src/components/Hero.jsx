@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
 const ROLES = [
-  'SOC Analyst Junior',
+  'SOC Analyst',
   'Threat Detection',
   'Incident Response',
   'SIEM Engineering',

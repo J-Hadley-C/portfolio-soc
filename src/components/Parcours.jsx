@@ -4,7 +4,7 @@ const ETAPES = [
   { titre: 'Formation initiale', texte: 'Développement logiciel' },
   { titre: 'Reconversion', texte: 'Cybersécurité SOC' },
   { titre: 'Lab monté', texte: 'VirtualBox + Wazuh + AD + Kali' },
-  { titre: 'Statut', texte: 'Disponible — 1er poste SOC Junior' },
+  { titre: 'Statut', texte: 'Disponible — poste d’analyste SOC' },
 ]
 
 // Dégradé violet -> cyan appliqué étape par étape (0 = violet, dernière = cyan)

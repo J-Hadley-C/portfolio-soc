@@ -11,7 +11,7 @@ const KEY_POINTS = [
   { label: 'Formation initiale', value: 'Développement logiciel' },
   { label: 'Reconversion', value: 'Cybersécurité SOC' },
   { label: 'Lab monté', value: 'VirtualBox + Wazuh + AD + Kali' },
-  { label: 'Statut', value: 'Disponible — 1er poste SOC Junior' },
+  { label: 'Statut', value: 'Disponible — poste d’analyste SOC' },
   { label: 'Email', value: 'jhadleyc@gmail.com' },
   { label: 'LinkedIn', value: 'linkedin.com/in/hadley-chery' },
 ]
@@ -49,7 +49,7 @@ export default function About() {
           </p>
           <p className="text-zinc-400 leading-relaxed">
             Je cherche un{' '}
-            <span className="text-accent font-semibold">premier poste de SOC Analyst Junior</span>{' '}
+            <span className="text-accent font-semibold">poste d’analyste SOC</span>{' '}
             pour continuer à apprendre au contact d'une équipe Blue Team.
           </p>
 
